@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to BareWatch</title>
+    <link rel="stylesheet" href="welcome.css">
+  </head>
+  <body>
+    <main class="welcome-shell">
+      <section class="intro">
+        <div class="brand-mark" aria-hidden="true">B</div>
+        <span class="eyebrow">BareWatch Beta</span>
+        <h1>Welcome to BareWatch.</h1>
+        <p>Hide the YouTube feeds and recommendations you don't want to see. Your settings are saved in this browser.</p>
+        <div class="actions">
+          <a class="primary" href="https://www.youtube.com/" target="_blank" rel="noreferrer">Open YouTube</a>
+          <button id="openSettings" class="secondary" type="button">Choose what to hide</button>
+        </div>
+      </section>
+
+      <section class="steps" aria-labelledby="steps-heading">
+        <div class="steps-heading">
+          <span>Quick start</span>
+          <h2 id="steps-heading">Three things to know</h2>
+        </div>
+        <ol>
+          <li>
+            <span class="number">1</span>
+            <div><strong>Pin BareWatch</strong><p>Open the browser’s extension menu and pin the BareWatch icon for quick access.</p></div>
+          </li>
+          <li>
+            <span class="number">2</span>
+            <div><strong>Pick your rules</strong><p>Use the popup for everyday switches or the full settings page for advanced controls and backups.</p></div>
+          </li>
+          <li>
+            <span class="number">3</span>
+            <div><strong>Pause instantly</strong><p>Press <kbd id="shortcutValue">Alt + Shift + F</kbd> to turn every hiding rule on or off.</p></div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="trust-strip" aria-label="Privacy summary">
+        <div><strong>Local settings</strong><span>Your choices stay in this browser</span></div>
+        <div><strong>No analytics</strong><span>No tracking or behavioral profiles</span></div>
+        <div><strong>YouTube only</strong><span>No access to unrelated websites</span></div>
+      </section>
+    </main>
+
+    <p id="status" role="status" aria-live="polite"></p>
+
+    <script src="welcome.js"></script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BareWatch</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="app-header">
+        <div class="brand-mark" aria-hidden="true">B</div>
+        <div>
+          <h1>BareWatch</h1>
+          <p>Less scrolling. More doing.</p>
+        </div>
+        <label class="switch master-switch" aria-label="Enable BareWatch">
+          <input id="enabled" data-setting="enabled" type="checkbox">
+          <span class="slider"></span>
+        </label>
+      </header>
+
+      <section class="controls" aria-labelledby="controls-title">
+        <h2 id="controls-title">Hide distractions</h2>
+
+        <label class="control-row" for="hideHomeFeed">
+          <span>
+            <strong>Home feed</strong>
+            <small>Recommendations on the homepage</small>
+          </span>
+          <span class="switch">
+            <input id="hideHomeFeed" data-setting="hideHomeFeed" type="checkbox">
+            <span class="slider"></span>
+          </span>
+        </label>
+
+        <label class="control-row" for="hideShorts">
+          <span>
+            <strong>Shorts</strong>
+            <small>Shorts links, cards, and shelves</small>
+          </span>
+          <span class="switch">
+            <input id="hideShorts" data-setting="hideShorts" type="checkbox">
+            <span class="slider"></span>
+          </span>
+        </label>
+
+        <label class="control-row" for="hideRelatedVideos">
+          <span>
+            <strong>Related videos</strong>
+            <small>Recommendations next to a video</small>
+          </span>
+          <span class="switch">
+            <input id="hideRelatedVideos" data-setting="hideRelatedVideos" type="checkbox">
+            <span class="slider"></span>
+          </span>
+        </label>
+
+        <label class="control-row" for="hideComments">
+          <span>
+            <strong>Comments</strong>
+            <small>The full comment section</small>
+          </span>
+          <span class="switch">
+            <input id="hideComments" data-setting="hideComments" type="checkbox">
+            <span class="slider"></span>
+          </span>
+        </label>
+
+        <label class="control-row" for="hideEndScreens">
+          <span>
+            <strong>End-screen cards</strong>
+            <small>Suggestions over the video player</small>
+          </span>
+          <span class="switch">
+            <input id="hideEndScreens" data-setting="hideEndScreens" type="checkbox">
+            <span class="slider"></span>
+          </span>
+        </label>
+
+        <label class="control-row" for="hideLiveChat">
+          <span>
+            <strong>Live chat</strong>
+            <small>Chat on streams and replays</small>
+          </span>
+          <span class="switch">
+            <input id="hideLiveChat" data-setting="hideLiveChat" type="checkbox">
+            <span class="slider"></span>
+          </span>
+        </label>
+      </section>
+
+      <div class="actions">
+        <button id="focusMode" class="primary" type="button">Enable Deep Focus</button>
+        <button id="resetDefaults" class="secondary" type="button">Reset defaults</button>
+      </div>
+
+      <button id="openOptions" class="options-link" type="button">
+        Open all settings and backup
+        <span aria-hidden="true">→</span>
+      </button>
+
+      <footer>
+        <span id="status" role="status" aria-live="polite">Loading settings…</span>
+        <span data-version>Beta</span>
+      </footer>
+    </main>
+
+    <script src="../shared/settings.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

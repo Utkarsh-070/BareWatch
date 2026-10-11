@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BareWatch Settings</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="BareWatch settings home">
+        <span class="brand-mark" aria-hidden="true">B</span>
+        <span>
+          <strong>BareWatch</strong>
+          <small data-version>Beta</small>
+        </span>
+      </a>
+      <div id="saveStatus" class="save-status" role="status" aria-live="polite">Loading settings…</div>
+    </header>
+
+    <main id="top" class="page-shell">
+      <section class="hero">
+        <div>
+          <span class="eyebrow">Your focus controls</span>
+          <h1>Choose what to hide on YouTube.</h1>
+          <p>Changes save in this browser and apply to your open YouTube tabs.</p>
+        </div>
+        <label class="master-card" for="enabled">
+          <span>
+            <strong>BareWatch</strong>
+            <small>Pause or resume every rule</small>
+          </span>
+          <span class="switch large">
+            <input id="enabled" data-setting="enabled" type="checkbox">
+            <span class="slider"></span>
+          </span>
+        </label>
+      </section>
+
+      <section class="preset-row" aria-label="Presets">
+        <button id="deepFocus" class="preset primary" type="button">
+          <strong>Deep Focus</strong>
+          <span>Hide every supported distraction</span>
+        </button>
+        <button id="recommended" class="preset" type="button">
+          <strong>Recommended</strong>
+          <span>Restore the balanced starter setup</span>
+        </button>
+      </section>
+
+      <div class="content-grid">
+        <div class="settings-column">
+          <section class="panel" aria-labelledby="watch-heading">
+            <div class="panel-heading">
+              <span class="panel-icon" aria-hidden="true">▶</span>
+              <div>
+                <h2 id="watch-heading">Watching</h2>
+                <p>Choose which sections appear around the video player.</p>
+              </div>
+            </div>
+
+            <div class="setting-list">
+              <label class="setting-row" for="hideRelatedVideos">
+                <span><strong>Related videos</strong><small>Recommendation rail beside or below videos</small></span>
+                <span class="switch"><input id="hideRelatedVideos" data-setting="hideRelatedVideos" type="checkbox"><span class="slider"></span></span>
+              </label>
+              <label class="setting-row" for="hideComments">
+                <span><strong>Comments</strong><small>Comment composer, replies, and discussion</small></span>
+                <span class="switch"><input id="hideComments" data-setting="hideComments" type="checkbox"><span class="slider"></span></span>
+              </label>
+              <label class="setting-row" for="hideEndScreens">
+                <span><strong>End-screen cards</strong><small>Recommendations shown over the player</small></span>
+                <span class="switch"><input id="hideEndScreens" data-setting="hideEndScreens" type="checkbox"><span class="slider"></span></span>
+              </label>
+              <label class="setting-row" for="hideLiveChat">
+                <span><strong>Live chat</strong><small>Live and replay chat panels</small></span>
+                <span class="switch"><input id="hideLiveChat" data-setting="hideLiveChat" type="checkbox"><span class="slider"></span></span>
+              </label>
+            </div>
+          </section>
+
+          <section class="panel" aria-labelledby="browse-heading">
+            <div class="panel-heading">
+              <span class="panel-icon" aria-hidden="true">⌂</span>
+              <div>
+                <h2 id="browse-heading">Browsing</h2>
+                <p>Choose which feeds and navigation links appear.</p>
+              </div>
+            </div>
+
+            <div class="setting-list">
+              <label class="setting-row" for="hideHomeFeed">
+                <span><strong>Home feed</strong><small>Homepage recommendations while preserving search</small></span>
+                <span class="switch"><input id="hideHomeFeed" data-setting="hideHomeFeed" type="checkbox"><span class="slider"></span></span>
+              </label>
+              <label class="setting-row" for="hideShorts">
+                <span><strong>Shorts entry points</strong><small>Shorts links, cards, and shelves</small></span>
+                <span class="switch"><input id="hideShorts" data-setting="hideShorts" type="checkbox"><span class="slider"></span></span>
+              </label>
+              <label class="setting-row" for="hideHomeCategories">
+                <span><strong>Homepage topic chips</strong><small>Topic filters displayed above the home feed</small></span>
+                <span class="switch"><input id="hideHomeCategories" data-setting="hideHomeCategories" type="checkbox"><span class="slider"></span></span>
+              </label>
+              <label class="setting-row" for="hideExplore">
+                <span><strong>Explore and Trending</strong><small>Navigation entries that lead to discovery feeds</small></span>
+                <span class="switch"><input id="hideExplore" data-setting="hideExplore" type="checkbox"><span class="slider"></span></span>
+              </label>
+              <label class="setting-row" for="hideNotifications">
+                <span><strong>Notification bell</strong><small>YouTube notification button in the header</small></span>
+                <span class="switch"><input id="hideNotifications" data-setting="hideNotifications" type="checkbox"><span class="slider"></span></span>
+              </label>
+            </div>
+          </section>
+        </div>
+
+        <aside class="utility-column">
+          <section class="panel compact" aria-labelledby="shortcut-heading">
+            <div class="panel-heading">
+              <span class="panel-icon" aria-hidden="true">⌨</span>
+              <div>
+                <h2 id="shortcut-heading">Quick pause</h2>
+                <p>Toggle every rule without opening the popup.</p>
+              </div>
+            </div>
+            <div class="shortcut-line">
+              <kbd id="shortcutValue">Checking…</kbd>
+              <button id="openShortcuts" class="text-button" type="button">Change shortcut</button>
+            </div>
+          </section>
+
+          <section class="panel compact" aria-labelledby="appearance-heading">
+            <div class="panel-heading">
+              <span class="panel-icon" aria-hidden="true">●</span>
+              <div>
+                <h2 id="appearance-heading">Toolbar</h2>
+                <p>Keep the current state visible at a glance.</p>
+              </div>
+            </div>
+            <label class="setting-row standalone" for="showBadge">
+              <span><strong>Show ON/OFF badge</strong><small>Displayed over the BareWatch icon</small></span>
+              <span class="switch"><input id="showBadge" data-setting="showBadge" type="checkbox"><span class="slider"></span></span>
+            </label>
+          </section>
+
+          <section class="panel compact" aria-labelledby="backup-heading">
+            <div class="panel-heading">
+              <span class="panel-icon" aria-hidden="true">↕</span>
+              <div>
+                <h2 id="backup-heading">Backup and support</h2>
+                <p>Your backup contains settings only—never YouTube history.</p>
+              </div>
+            </div>
+            <div class="button-stack">
+              <button id="exportSettings" class="utility-button" type="button">Export settings</button>
+              <label class="utility-button file-button" for="importFile">Import settings</label>
+              <input id="importFile" class="visually-hidden" type="file" accept="application/json,.json">
+              <button id="copyDiagnostics" class="utility-button" type="button">Copy safe diagnostics</button>
+              <button id="resetSettings" class="utility-button danger" type="button">Reset all settings</button>
+            </div>
+          </section>
+
+          <section class="privacy-card" aria-labelledby="privacy-heading">
+            <span aria-hidden="true">✓</span>
+            <div>
+              <h2 id="privacy-heading">Private by design</h2>
+              <p>No account, analytics, ads, browsing-history collection, or external server. Preferences stay in this browser.</p>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <script src="../shared/settings.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>

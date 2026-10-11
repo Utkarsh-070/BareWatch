@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">BareWatch icon</title>
+  <desc id="desc">A white geometric letter B on an original pink-to-orange rounded square.</desc>
+  <defs>
+    <linearGradient id="background" x1="74" y1="52" x2="438" y2="460" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff2454"/>
+      <stop offset="1" stop-color="#ff7a36"/>
+    </linearGradient>
+  </defs>
+  <rect x="20" y="20" width="472" height="472" rx="132" fill="url(#background)"/>
+  <path fill="#fff" d="M142 118h138c77 0 120 31 120 88 0 35-18 61-50 75 39 12 62 41 62 82 0 69-50 105-137 105H142V118Zm82 69v64h49c31 0 46-11 46-32s-15-32-46-32h-49Zm0 129v83h57c34 0 50-14 50-41 0-28-17-42-50-42h-57Z"/>
+</svg>

@@ -1,0 +1,61 @@
+html.barewatch-enabled.barewatch-hide-home.barewatch-route-home
+  ytd-browse[page-subtype="home"] ytd-rich-grid-renderer,
+html.barewatch-enabled.barewatch-hide-home.barewatch-route-home
+  ytd-browse[page-subtype="home"] #contents.ytd-rich-grid-renderer {
+  display: none !important;
+}
+
+html.barewatch-enabled.barewatch-hide-shorts [data-barewatch-shorts="true"],
+html.barewatch-enabled.barewatch-hide-shorts ytd-reel-shelf-renderer,
+html.barewatch-enabled.barewatch-hide-shorts
+  ytd-rich-section-renderer:has(ytd-reel-shelf-renderer) {
+  display: none !important;
+}
+
+html.barewatch-enabled.barewatch-hide-explore [data-barewatch-explore="true"] {
+  display: none !important;
+}
+
+html.barewatch-enabled.barewatch-hide-notifications
+  ytd-notification-topbar-button-renderer {
+  display: none !important;
+}
+
+html.barewatch-enabled.barewatch-hide-home-categories.barewatch-route-home
+  ytd-feed-filter-chip-bar-renderer,
+html.barewatch-enabled.barewatch-hide-home-categories.barewatch-route-home
+  yt-chip-cloud-renderer {
+  display: none !important;
+}
+
+html.barewatch-enabled.barewatch-hide-related.barewatch-route-watch
+  ytd-watch-flexy #related,
+html.barewatch-enabled.barewatch-hide-related.barewatch-route-watch
+  ytd-watch-next-secondary-results-renderer {
+  display: none !important;
+}
+
+html.barewatch-enabled.barewatch-hide-comments.barewatch-route-watch
+  ytd-watch-flexy ytd-comments#comments,
+html.barewatch-enabled.barewatch-hide-comments.barewatch-route-watch
+  ytd-watch-flexy #comments.ytd-watch-flexy {
+  display: none !important;
+}
+
+html.barewatch-enabled.barewatch-hide-end-screens
+  .html5-video-player .ytp-ce-element,
+html.barewatch-enabled.barewatch-hide-end-screens
+  .html5-video-player .ytp-endscreen-content,
+html.barewatch-enabled.barewatch-hide-end-screens
+  .html5-video-player .ytp-videowall-still {
+  display: none !important;
+}
+
+html.barewatch-enabled.barewatch-hide-live-chat.barewatch-route-watch
+  ytd-watch-flexy ytd-live-chat-frame,
+html.barewatch-enabled.barewatch-hide-live-chat.barewatch-route-watch
+  ytd-watch-flexy #chat-container,
+html.barewatch-enabled.barewatch-hide-live-chat.barewatch-route-watch
+  ytd-watch-flexy #chat {
+  display: none !important;
+}

@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "BareWatch",
+  "short_name": "BareWatch",
+  "version": "0.2.0",
+  "description": "Hide distracting parts of YouTube and stay focused.",
+  "minimum_chrome_version": "105",
+  "permissions": ["storage"],
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "action": {
+    "default_title": "BareWatch",
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "commands": {
+    "toggle-barewatch": {
+      "suggested_key": {
+        "default": "Alt+Shift+F",
+        "mac": "Command+Shift+F"
+      },
+      "description": "Turn BareWatch on or off"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "css": ["content/youtube.css"],
+      "js": ["shared/settings.js", "content/content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

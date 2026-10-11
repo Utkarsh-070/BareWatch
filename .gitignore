@@ -1,0 +1,15 @@
+node_modules/
+release/
+coverage/
+work/
+*.zip
+*.log
+*.tmp
+*.bak
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,13 @@
+{
+  "name": "barewatch",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Hide distracting parts of YouTube with a Manifest V3 extension.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test tests/settings.test.js tests/background.test.js tests/pages.test.js tests/content.test.js && node tests/release-check.js"
+  }
+}
